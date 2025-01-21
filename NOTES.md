@@ -105,6 +105,24 @@ ans) 1. always start reading package.json
     
     - start function names with capital letter.
     - start file name with capital letter.
+    - some libraries will force you to keep file extension with .jsx . only for those files which are returning some HTML .
     
+    - JSX - JS returning HTML.
+
+    NOTE - any file returning HTML can have .jsx extension.
+
+// ****************************************
+
+
+
+
+// L4**************************************
+
+// creating our own react
+
+// 2:02:22
+
+
+
 
 // ****************************************
