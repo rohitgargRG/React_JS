@@ -1,9 +1,13 @@
 
+import Chai from './Test'
 function App() {
   
   return (
-    <>
-      <h1>RG CR7</h1>
+    // returning multiple elements from a function.
+    <>  // fragment
+    <Chai />
+    <h1>RG CR7</h1>
+    <h3>suuiiii</h3>
     </>
   )
 }
