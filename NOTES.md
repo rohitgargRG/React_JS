@@ -122,7 +122,63 @@ ans) 1. always start reading package.json
 
 // 2:02:22
 
+- react uses a bundler.
+
+- expression , evaluated expression.
+
+- we need to follow the standard syntax that has been predefined , while creating our own react element . we cannot use any random syntax while creating a react element.
+
+steps to create our own react element - 
+
+    1) first we need a container where we will inject our react element.
+    2) now we need a customRender method using which we will inject our element.
+    3) in this method we will pass the reactElement and the container on which we will inject our reactElement.
+    4) NOTE - follow standard syntax while creating the reactElement.
 
 
+    // summary 2:20:00 - 2:23:00
+
+    // see react source code - github/facebook/react
+
+    ### NOTE - read more about babel.
 
 // ****************************************
+
+// L5 *********************************************
+# hooks
+
+while creating projects - 
+
+- main file is "main.jsx"
+- do work on "App.jsx"
+
+Counter Project -
+
+- main power of react comes when there is UI updation.
+- i.e, a single variable is getting updated at multiple places in UI.
+- in such scenario , react controls the UI updation process smoothly.
+
+- for this UI updation purpose , react provides some methods known as "hooks" , which helps in easy/smooth UI updation.
+
+- every hook performs a particular task.
+
+- import { useState } from 'react'  -> importing a hook.
+
+different hooks - 
+
+### useState - 
+    - used to change state and update state in UI.
+
+    // using a hook
+  ** syntax - let [counter , setCounter] = useState(15) **
+
+    // we can use any name in place of counter and setCounter.
+    // counter variable used here will get updated in UI.
+    // setCounter is  a method that will control counter variable.
+    // 15 -> default value of counter variable. we can use any value here.
+    // now whenever you want to update value of counter , just call setCounter method and do the updation inside that.
+    // it will automatically update the value of counter at all the places in the UI.
+
+
+// 2:55:40
+// *************************************************
