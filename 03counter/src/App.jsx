@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-     <h1>chai aur react</h1>
+     <h1 style = {{ bakgroundColor : "blue" }}>chai aur react</h1>
      <h2>Counter value : {counter}</h2>
 
      <button

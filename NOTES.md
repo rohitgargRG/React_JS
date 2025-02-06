@@ -182,3 +182,77 @@ different hooks -
 
 // 2:55:40
 // *************************************************
+
+// L6 **********************************************
+(Important for interview)
+
+// virtual DOM in react
+(not used today)
+
+in react , 
+-- createRoot() method creates a DOM like structure behind the scene.
+-- this DOM is known as Virtual DOM.
+-- then this virtual DOM is compared with browsers main DOM.
+-- then instead od re-creating the entire DOM ,  only the required changes are made in the browsers actual DOM.
+-- the algorithm used to update DOM by comparing with virtual DOM is "react fiber".
+
+whereas,
+-- in browser , everytime a new DOM is created . this is known as page-reloading , i.e, to create a new DOM everytime.
+
+-- read article about react fiber
+-- https://github.com/acdlite/react-fiber-architecture
+-- key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+
+-- reconciliation
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+-- Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM.
+
+// ********* imp for interview ******************
+-- Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+// ********************************************
+
+The key points are:
+
+-- In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+
+-- Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+
+-- A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+
+We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
+
+-- pause work and come back to it later.
+-- assign priority to different types of work.
+-- reuse previously completed work.
+-- abort work if it's no longer needed.
+//***************************************************
+
+// L7 ****************************************************
+props(properties in react) and tailwind CSS
+
+-- every tag must be  closed tag in react.
+
+-- props make components reusable.
+
+-- we can create components and reuse it as many times as we want.
+-- we can also pass values from these components
+-- to receive and use these values we will use props inside the function that we created for components. 
+
+//*******************************************************
+
+// 3:48:32 *******************************************
+L8(important for interview)
+
+
+// watch video
+
+// *******************************************************
+
+// 3:56:56 ********************************************
+
+
+
+
+
+// *****************************************************
