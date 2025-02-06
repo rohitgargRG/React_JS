@@ -256,3 +256,18 @@ L8(important for interview)
 
 
 // *****************************************************
+
+// 4:18:00 **********************************************
+(password generator project)
+
+useCallback() - read more about this hook
+
+ -- useCallback is a React Hook that lets you cache a function definition between re-renders.
+ -- The React useCallback Hook returns a memoized callback function.
+ -- Think of memoization as caching a value so that it does not need to be recalculated.
+ -- The useCallback Hook only runs when one of its dependencies update.
+-- This can improve performance.
+
+// 4:42:51
+
+// *******************************************************
