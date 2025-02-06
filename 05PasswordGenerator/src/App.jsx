@@ -45,7 +45,10 @@ function App() {
   const passwordRef = useRef(null)
 
   const copyPasswordToClipBoard = useCallback(() => {
+    // select entire text from the referenced text
     passwordRef.current?.select()
+
+    // to create highlighting feature
     passwordRef.current?.setSelectionRange(0,101)
     window.navigator.clipboard.writeText(password)
   } , [password])
