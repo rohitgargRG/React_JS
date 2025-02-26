@@ -266,8 +266,69 @@ useCallback() - read more about this hook
  -- The React useCallback Hook returns a memoized callback function.
  -- Think of memoization as caching a value so that it does not need to be recalculated.
  -- The useCallback Hook only runs when one of its dependencies update.
--- This can improve performance.
+ -- This can improve performance.
+ -- it tries to memorize the function as much as possible.
 
-// 4:42:51
+ useEffect() - read more about this hook
+
+  -- while using useCallback().
+  -- use useEffect() to make a function call.
+  -- whenever our page reloads , then this hook or function inside is re-runned.
+  -- even if there is any manipulation with the values that have been passed in dependencies array , this hook will re-run everytime a change or manipulation has been done on dependencies.
+
+
+useRef() - hook use to refer something
+
+    -- whenever we want reference of something , use useRef() hook.
+    -- use ref keyword to get reference of the value stored in a field.
+    
+    
+-- we can use window in core react.
+-- in Next.js we can't use window object , since it runs on server side.
+
+// use this code to copy content stored in password keyword to clipboard.
+-- window.navigator.clipboard.writeText(password)
+
+// this line will highlight the text while copying.
+-- passwordRef.current?.select()
+
+// this will select and copy only first three characters from the entire text.
+-- passwordRef.current?.setSelectionRange(0,3)
 
 // *******************************************************
+
+
+// ***************************************************************
+(5:12:13)
+
+# Currency Convertor project - 
+
+api - 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json'
+
+
+// NOTE - mostly values fetched via an api call are in string format , hence we need to convert it into json format.
+
+// creating custom hooks
+
+best practice-
+    -- name file with .js extension when you are returning js.
+    -- name filw with .jsx extension when you are returning jsx.
+
+// NOTE** - custom hooks can also use built-in hooks(useState , etc).
+
+-- first letter of file inside component folder should be capital.
+
+// best practice -
+// create a index.js file in componenets folder and import all componenets in it 
+// then export all components from that file
+// instead of exporting each compoenent from its file.
+
+
+
+
+
+
+
+
+
+// ***************************************************************
