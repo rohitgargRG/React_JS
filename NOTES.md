@@ -323,6 +323,14 @@ best practice-
 // then export all components from that file
 // instead of exporting each compoenent from its file.
 
+# useId() hook -
+
+-- useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+
+-- useId returns a unique ID string associated with this particular useId call in this particular component.
+
+-- Do not call useId to generate keys in a list. Keys should be generated from your data.
+
 
 
 
