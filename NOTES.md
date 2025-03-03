@@ -334,9 +334,37 @@ best practice-
 
 
 
-
-
-
-
-
 // ***************************************************************
+
+// 6:14:00 ********************************************************
+
+// website project
+
+// reactrouter.com
+// react router is a third party library , not a core part of react.js
+
+// npm i react-router-dom -> to install reactrouter.
+
+// there are multiple things which you get with react-router-dom.
+
+// ************** interview question ***************
+// <Link> tag - used in place of <a> tag.
+// if you use <a> tag , then everytime the page will reload , but in react we do not want our page to reload everytime, hence we use <Link> tag which provides us  with this feature , hence do not use <a> tag.
+
+
+
+<NavLink
+className={(isActive) =>
+`block py-2 pr-4 pl-3 duration-200 
+${isActive ? "text-orange-700" : "text-grey-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+}>Home
+</NavLink>
+
+// writing classes like this inside a callback provides us the flexibility to manipulate them .
+// isActive automatically matches the current pages link with varaible and changes it acording to specified condition.
+// **************************************************
+
+
+
+
+// **********************************************************
