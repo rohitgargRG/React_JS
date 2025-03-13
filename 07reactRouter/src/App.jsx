@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import header from './components/header/header'
-import footer from './components/footer/footer'
-import home from './components/home/home'
+import Header from './components/header/header'
+import Footer from './components/footer/footer'
+import Home from './components/home/home'
 
 
 
@@ -11,7 +11,9 @@ function App() {
   return (
       // combining components
       <>
-      
+        <Header/>
+        <Home/>
+        <Footer/>
       </>
   )
 }
