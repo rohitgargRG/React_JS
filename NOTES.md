@@ -337,6 +337,7 @@ best practice-
 // ***************************************************************
 
 // 6:14:00 ********************************************************
+# React-Router-Dom
 
 // website project
 
@@ -365,6 +366,115 @@ ${isActive ? "text-orange-700" : "text-grey-700"} border-b border-gray-100 hover
 // **************************************************
 
 
+// footer
+
+-- react router provides <Outlet/>
+-- wherever you have written <Outlet/> , there you can change things.
+
+-- inside main.jsx replace <App /> by 
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+   <RouterProvider router = {router}/>
+  </StrictMode>,
+)
+
+since we are using reat router , we will use react router for rendering , you no longer need to specify each component in App.jsx and create the structre of site.
+
+<RouterProvider router = {router}/>
+
+// this takes a prop router
+
+// how to create  router?
+
+// 2 ways
+
+// m1 - pass the list of path and its corresponding element in an object inside createBrowserRouter method
+
+/*
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<Layout/>,   // the parent element
+    children:[
+      {
+        path:"" ,         // to display on path:/
+        element:<Home/>
+      },
+      {
+        path:"about",     // path : /about
+        element:<About/>
+      },
+      {
+        path:"contact",    // path : /contact
+        element:<Contact/>
+      }
+    ]
+  }
+])
+  */
+
+  // create a Layout.jsx file and create a basic layout 
+
+  eg - function Layout(){
+    return (
+        <>
+        <Header/>
+        <Outlet/>
+        <Footer/>
+        </>
+    )
+}
+
+// a very common scenario in react ->
+in this layout header and footer will remain as it is
+only the place where outlet is written will be changed.
+
+// on changing path only place where outlet is written will be changed , rest will remain as it is.
 
 
-// **********************************************************
+// NOTE - define to = "path" in Link and navLink to properly navigate
+
+// m2 of creating router (use this)
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path = '/' element = {<Layout/>}>
+      <Route path='' element = {<Home />}/>
+      <Route path='about' element = {<About />}/>
+      <Route path='contact' element = {<Contact />}/>
+
+      {/* getting value from url */}
+      <Route path = 'user/:userid' element = {<User/>}/>
+      {/* we will be getting the access to this userId inside User component. */}
+    </Route>
+  )
+)
+
+// import { useParams } from 'react-router-dom';
+// returns userid value 
+// const {userid} = useParams()
+
+// more optimised way to load data
+
+-- use loader in route
+-- use useLoaderData() hook to get this loaded data.
+
+-- loader starts fetching the data as soon as your cursor moves over the option even before clicking , this makes data fetching much faster and reduces the lag while data fetching.
+
+
+// instead of doing like this use a loader
+// const [data , setData] = useState([])
+    // useEffect(() => {
+    //     fetch('https://api.github.com/users/rohitgargRG')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         setData(data)
+    //     })
+    // },[])
+
+
+// read more about react-router-dom from documentation.
+
+**********************************************************

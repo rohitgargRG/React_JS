@@ -10,6 +10,7 @@ import './index.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Contact from './components/contact/contact.jsx'
 import User from './components/user/user.jsx'
+import Github , {githubFollower} from './components/github/github.jsx'
 // create  router 
 
 // m1
@@ -49,6 +50,13 @@ const router = createBrowserRouter(
       {/* getting value from url */}
       <Route path = 'user/:userid' element = {<User/>}/>
       {/* we will be getting the access to this userId inside User component. */}
+      
+      <Route
+      loader = {githubFollower}
+      path = 'github'
+      element = {<Github/>}
+      
+      />
     </Route>
   )
 )
