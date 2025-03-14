@@ -451,11 +451,12 @@ const router = createBrowserRouter(
   )
 )
 
+// each route can have nesting
 // import { useParams } from 'react-router-dom';
 // returns userid value 
 // const {userid} = useParams()
 
-// more optimised way to load data
+// more optimised way to load data whe API calls are used
 
 -- use loader in route
 -- use useLoaderData() hook to get this loaded data.
@@ -476,5 +477,58 @@ const router = createBrowserRouter(
 
 
 // read more about react-router-dom from documentation.
+
+
+// 7:18:39 - context API and state management.**(imp)
+*******************************************************
+-- Difficult topic
+
+-- Context API
+-- state management
+-- almost all projects in react use state management.
+
+-- redux - used for state management.
+-- react - redux
+-- redux - toolkit (RTK)
+-- zustand
+
+-- context API means i am creating a global variable , and in that global variable all the data will go.
+-- now we can use this data anywhere directly.
+-- we don't need to pass this data from variable to variable.
+
+soln 1 - create  a js file and put all the data inside it.
+--> doing this will create a lot of problems , since any variable can update/change this file and your data will be lost.
+
+// steps  - 
+
+// create a context folder inside src folder.
+// create context files(.js) [there can be multiple  context files]
+
+const userContext = React.createContext()
+
+-- every context is a provider.
+-- always we need to create a provider with a context.
+-- as soon as the components are wrapped inside the provider , all the components inside the provider can use the context global variable's data.
+
+-- NOTE - 
+-- all the componenets inside a provider can access/use the data stored in context using that context variable.
+
+-- context provider file will be .jsx
+
+
+-- 7;39:00
+
+
+
+
+
+
+
+
+
+
+
+
+// *****************************************************************
 
 **********************************************************
