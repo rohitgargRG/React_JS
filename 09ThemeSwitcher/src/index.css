@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* Tailwind dark mode bg-gray-900 */
+  color: white; /* Set text color for dark mode */
+}
+
